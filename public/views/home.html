@@ -1,9 +1,9 @@
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
         <h4>Input your long url here:</h4>
-        <form>
+        <form ng-submit="submit()">
             <div class="form-group">
-                <input type="text" class="form-control"/>
+                <input type="text" class="form-control" ng-model="longUrl"/>
             </div>
             <input type="submit" value="Get TinyURL" class="btn btn-primary"/>
         </form>
