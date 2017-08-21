@@ -1,13 +1,21 @@
 /**
  * Created by ChangLiu on 8/4/17.
  */
-angular.module("tinyurlApp")
-    .controller("homeController", ["$scope", "$http", "$location", function ($scope, $http, $location) {
-        $scope.submit = function () {
+(function () {
+    angular
+        .module("tinyurlApp")
+        .controller("homeController", homeController);
+
+    function homeController($http, $location) {
+        var vm = this;
+        vm.submit = submit;
+
+        function submit() {
             $http.post("/api/v1/urls", {
-                longUrl : $scope.longUrl
+                longUrl : vm.longUrl
             }).success(function (data) {
                 $location.path("/urls/" + data.shortUrl);
             });
         }
-    }]);
+    }
+})();
