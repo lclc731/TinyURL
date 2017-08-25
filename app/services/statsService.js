@@ -25,6 +25,18 @@ var logRequest = function (shortUrl, req) {
     request.save();
 };
 
+
+var getUrlInfo = function (shortUrl, info, callback) {
+    if (info === "totalClicks") {
+        RequestModel.count({ shortUrl : shortUrl}, function (err, data) {
+            callback(data);
+        });
+        return;
+    }
+};
+
+
 module.exports =  {
-    logRequest : logRequest
+    logRequest : logRequest,
+    getUrlInfo : getUrlInfo
 };
