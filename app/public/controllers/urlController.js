@@ -25,10 +25,7 @@
                 .success(function (data) {
                     vm.totalClicks = data;
                 });
-            
-            var renderChart = function (chart, info) {
-                
-            }
+
         }
     }
 
