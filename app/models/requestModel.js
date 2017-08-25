@@ -13,6 +13,6 @@ var RequestSchema = new Schema({
     timestamp : Date
 });
 
-var RequestSchema = mongoose.model("RequestSchema", RequestSchema);
+var requestModel = mongoose.model("RequestModel", RequestSchema);
 
-module.exports = RequestSchema;
+module.exports = requestModel;
