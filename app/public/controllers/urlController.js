@@ -14,7 +14,7 @@
         vm.hour = "hour";
         vm.day = "day";
         vm.month = "month";
-        vm.time = vm.hour;
+        vm.time = "hour";
 
         init();
 
